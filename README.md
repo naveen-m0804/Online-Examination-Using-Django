@@ -2,7 +2,39 @@
 
 ## Project Overview
 
-The **Online Examination System** is a web-based application developed using **Python Django Framework**. This project focuses on managing student examinations efficiently. It allows students to register, take exams, and view their results, while teachers and administrators can manage courses, question sets, and monitor student performance.
+This project is an **Online Examination System** built using the Django framework. It provides functionalities for *students* to take online exams, *teachers* to create and manage courses and questions, and an *administrator* to oversee the entire system, including user management, teacher approvals, and content control. The system ensures secure access through robust **user authentication and authorization** and delivers a dynamic user interface through **templates**.
+
+
+## Visual Overview
+
+```mermaid
+flowchart TD
+    A0["Django Models (Data Structure)
+"]
+    A1["Django Views (Business Logic)
+"]
+    A2["Django URLs (Request Routing)
+"]
+    A3["Django Forms (User Input & Validation)
+"]
+    A4["User Authentication and Authorization (Access Control)
+"]
+    A5["Templates (User Interface Rendering)
+"]
+    A6["Project Settings (Global Configuration)
+"]
+    A2 -- "Routes requests to" --> A1
+    A1 -- "Interacts with data via" --> A0
+    A1 -- "Processes user input with" --> A3
+    A1 -- "Renders UI using" --> A5
+    A3 -- "Built upon" --> A0
+    A4 -- "Protects access to" --> A1
+    A6 -- "Configures behavior for" --> A1
+    A4 -- "Manages user data in" --> A0
+    A5 -- "Displays user input fields ..." --> A3
+    A5 -- "Renders based on user roles..." --> A4
+```
+
 
 ## Features
 
